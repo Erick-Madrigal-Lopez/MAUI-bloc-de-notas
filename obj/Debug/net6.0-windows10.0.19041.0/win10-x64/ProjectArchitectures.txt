@@ -1,0 +1,1 @@
+C:\Users\almde\source\repos\bloc-de-notas-app\bloc-de-notas-app.csproj;x64

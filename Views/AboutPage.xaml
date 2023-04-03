@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bloc_de_notas_app.Views.AboutPage"
+             xmlns:models="clr-namespace:bloc_de_notas_app.Models"
+             Title="AboutPage">
+    <ContentPage.BindingContext>
+        <models:About/>
+    </ContentPage.BindingContext>
+    <VerticalStackLayout>
+        <Grid ColumnDefinitions="*" RowDefinitions="*,*,*,*,*" RowSpacing="10">
+            <Image 
+                Source="dotnet_bot.png"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="The dotnet Bot waving hello!!"
+                HeightRequest="64"/>
+            <Label Grid.Row="1" HorizontalOptions="Center" FontSize="22" FontAttributes="Bold" Text="{Binding Tittle}" VerticalOptions="End"/>
+            <Label Grid.Row="2" HorizontalOptions="Center" FontSize="22" Text="{Binding Version}" VerticalOptions="End"/>
+            <Label Grid.Row="3" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="{Binding Messagge}"/>
+            <Button Grid.Row="4" HorizontalOptions="Center" Padding="60,5" Text="Ver mas..." Clicked="LearnMore_Clicked"/>
+        </Grid>
+        
+    </VerticalStackLayout>
+</ContentPage>
